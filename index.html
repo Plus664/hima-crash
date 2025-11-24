@@ -7,21 +7,30 @@
   <title>暇つぶし</title>
   <style>
     html, body {
-      margin: 0; padding: 0;
-      background: #222; color: #fff;
-      font-family: sans-serif; text-align: center;
+      margin: 0;
+      padding: 0;
+      background: #222;
+      color: #fff;
+      font-family: sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;   /* 横中央 */
+      justify-content: center; /* 縦中央 */
     }
-
-    h1 { margin: 10px 0; }
-
-    /* PC用デフォルト（央の元CSSに近い） */
+    
+    h1 {
+      margin-top: 40px; /* タイトルを少し下げる */
+      margin-bottom: 20px;
+    }
+    
     #gameArea {
       position: relative;
       width: 600px;
       height: 200px;
-      margin: 20px auto;
       background: #333;
       overflow: hidden;
+      margin: 0 auto;
     }
 
     .word {
