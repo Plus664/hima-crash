@@ -65,7 +65,7 @@
 
 <script>
 let score = 0;
-let speed = 2;
+let speed = 3;
 let gameOver = false;
 const gameArea = document.getElementById("gameArea");
 const hammerBtn = document.getElementById("hammerBtn");
@@ -114,7 +114,7 @@ function spawnWord() {
   words.push({el: word, interval: interval});
 
   // 出現間隔ランダム（さらに狭め）
-  const nextDelay = 500 + Math.random()*300; // 400〜800ms
+  const nextDelay = 500 + Math.random()*300; // 500〜800ms
   spawnTimeout = setTimeout(spawnWord, nextDelay);
 }
 
