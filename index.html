@@ -208,13 +208,20 @@ function startGame() {
 restartBtn.onclick = startGame;
 
 function checkOrientation() {
+  const overlay = document.getElementById("overlay");
+  const overlayContent = document.getElementById("overlayContent");
+
   if (window.innerHeight > window.innerWidth) {
-    // 縦画面なら警告
-    document.getElementById("overlay").style.display = "flex";
-    document.getElementById("overlayContent").innerHTML =
+    // 縦画面なら警告を表示
+    overlay.style.display = "flex";
+    overlayContent.innerHTML =
       "<h2>横画面にしてください</h2><p>スマホを横に回して遊んでね</p>";
+  } else {
+    // 横画面なら非表示に戻す
+    overlay.style.display = "none";
   }
 }
+
 window.addEventListener("resize", checkOrientation);
 checkOrientation();
 
